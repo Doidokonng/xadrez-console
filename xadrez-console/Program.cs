@@ -8,7 +8,9 @@ try
 
 
     tab.ColacarPeca(new Rei(tab, Cor.Preta), new Posicao(1, 0));
-    tab.ColacarPeca(new Torre(tab, Cor.Preta), new Posicao(1, -4));
+    tab.ColacarPeca(new Torre(tab, Cor.Preta), new Posicao(0, 0));
+    tab.ColacarPeca(new Bispo(tab, Cor.Branca), new Posicao(5, 4));
+
 
     Tela.ImprimirTabuleiro(tab);
 
