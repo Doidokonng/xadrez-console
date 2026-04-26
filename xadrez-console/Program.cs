@@ -2,12 +2,21 @@
 using xadrez_console;
 using xadrez;
 
-Tabuleiro tab = new Tabuleiro(8, 8);
+try
+{
+    Tabuleiro tab = new Tabuleiro(8, 8);
 
 
-tab.ColacarPeca(new Rei(tab, Cor.Preta), new Posicao(1, 0));
+    tab.ColacarPeca(new Rei(tab, Cor.Preta), new Posicao(1, 0));
+    tab.ColacarPeca(new Torre(tab, Cor.Preta), new Posicao(1, -4));
 
-Tela.ImprimirTabuleiro(tab);
+    Tela.ImprimirTabuleiro(tab);
 
-Console.ReadLine();
+    Console.ReadLine();
+}
+
+catch (TabuleiroException e)
+{
+    Console.WriteLine(e.Message);
+}
 
