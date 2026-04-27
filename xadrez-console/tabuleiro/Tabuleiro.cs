@@ -29,7 +29,7 @@
             return peca(pos) != null;
         }
 
-        public void ColacarPeca(Peca p, Posicao pos)
+        public void ColocarPeca(Peca p, Posicao pos)
         {
             if (ExistePeca(pos))
             {
@@ -38,6 +38,18 @@
             Pecas[pos.Linha, pos.Coluna] = p;
             p.Posicao = pos;
 
+        }
+
+        public Peca RetirarPeca(Posicao pos)
+        {
+            if (peca(pos)== null)
+            {
+                return null;
+            }
+            Peca aux = peca(pos);
+            aux.Posicao = null;
+            Pecas[pos.Linha, pos.Coluna] = null;
+            return aux;
         }
 
         public bool PosicaoValida(Posicao pos)
