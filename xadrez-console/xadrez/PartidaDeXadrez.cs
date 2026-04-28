@@ -110,10 +110,11 @@ namespace xadrez
                 {
                     for (int j = 0; j < Tab.Colunas; j++)
                     {
+                        Posicao origem = x.Posicao;
                         Posicao destino = new Posicao(i, j);
-                        Peca pecaCapturtada = ExecutarMovimento(x.Posicao, destino);
+                        Peca pecaCapturtada = ExecutarMovimento(origem, destino);
                         bool testeXeque = EstarEmXeque(cor);
-                        DesfazMovimento(x.Posicao, destino, pecaCapturtada);
+                        DesfazMovimento(origem, destino, pecaCapturtada);
                         if (!testeXeque)
                         {
                             return false;
@@ -186,7 +187,7 @@ namespace xadrez
 
         public void ValidarPosicaoDeDestisno(Posicao origem, Posicao destino)
         {
-            if (!Tab.peca(origem).PodeMoverPara(destino))
+            if (!Tab.peca(origem).MovimentoPossivel(destino))
             {
                 throw new TabuleiroException("Posição de destino inválida!");
             }
