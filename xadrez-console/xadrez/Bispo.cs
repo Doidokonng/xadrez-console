@@ -27,7 +27,7 @@ namespace xadrez
 
             // NO
 
-            pos.DefinerValores(Posicao.Linha - 1, Posicao.Coluna - 1);
+            pos.DefinirValores(Posicao.Linha - 1, Posicao.Coluna - 1);
             while (Tab.PosicaoValida(pos) && PodeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
@@ -35,12 +35,12 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.DefinerValores(Posicao.Linha - 1, Posicao.Coluna - 1);
+                pos.DefinirValores(pos.Linha - 1, pos.Coluna - 1);
             }
 
             // NE
 
-            pos.DefinerValores(Posicao.Linha - 1, Posicao.Coluna + 1);
+            pos.DefinirValores(Posicao.Linha - 1, Posicao.Coluna + 1);
             while (Tab.PosicaoValida(pos) && PodeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
@@ -48,12 +48,12 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.DefinerValores(Posicao.Linha - 1, Posicao.Coluna + 1);
+                pos.DefinirValores(pos.Linha - 1, pos.Coluna + 1);
             }
 
             // SE
 
-            pos.DefinerValores(Posicao.Linha + 1, Posicao.Coluna + 1);
+            pos.DefinirValores(Posicao.Linha + 1, Posicao.Coluna + 1);
             while (Tab.PosicaoValida(pos) && PodeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
@@ -61,12 +61,12 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.DefinerValores(Posicao.Linha + 1, Posicao.Coluna + 1);
+                pos.DefinirValores(pos.Linha + 1, pos.Coluna + 1);
             }
 
             // SO
 
-            pos.DefinerValores(Posicao.Linha + 1, Posicao.Coluna - 1);
+            pos.DefinirValores(Posicao.Linha + 1, Posicao.Coluna - 1);
             while (Tab.PosicaoValida(pos) && PodeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
@@ -74,7 +74,7 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.DefinerValores(Posicao.Linha + 1, Posicao.Coluna - 1);
+                pos.DefinirValores(pos.Linha + 1, pos.Coluna - 1);
             }
 
             return mat;

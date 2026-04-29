@@ -14,7 +14,7 @@ namespace tabuleiro
             Coluna = coluna;
         }
 
-        public void DefinerValores(int linha, int coluna)
+        public void DefinirValores(int linha, int coluna)
         {
             Linha = linha;
             Coluna = coluna;
