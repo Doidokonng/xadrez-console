@@ -123,9 +123,7 @@ namespace xadrez
                     }
                 }
             }
-
-
-
+           
             return mat;
 
         }
