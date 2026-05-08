@@ -29,7 +29,7 @@ O motor do jogo aplica rigorosamente as regras do xadrez, incluindo:
 Você pode testar o projeto de duas formas:
 
 ### Opção 1: Baixar a versão compilada (Recomendado para testes rápidos)
-Vá até a aba **[Releases]([https://github.com/Doidokonng/xadrez-console/releases/tag/v1.0])** deste repositório e baixe o arquivo `.zip` mais recente. Descompacte e execute para jogar.
+Vá até a aba **[Releases](https://github.com/Doidokonng/xadrez-console/releases/tag/v1.0)** deste repositório e baixe o arquivo `.zip` mais recente. Descompacte e execute para jogar.
 
 ### Opção 2: Rodar o código fonte localmente
 Se você for um desenvolvedor e quiser rodar via terminal, certifique-se de ter o SDK do .NET instalado e siga os passos:
